@@ -1,13 +1,3 @@
-/**
-@license
-Copyright (c) 2018 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-*/
-
 const puppeteer = require('puppeteer');
 const expect = require('chai').expect;
 const {startServer} = require('polyserve');
@@ -103,14 +93,6 @@ async function takeAndCompareScreenshot(page, route, filePrefix) {
 
 function compareScreenshots(view) {
   return new Promise((resolve, reject) => {
-    // Note: for debugging, you can dump the screenshotted img as base64.
-    // fs.createReadStream(`${currentDir}/${view}.png`, { encoding: 'base64' })
-    //   .on('data', function (data) {
-    //     console.log('got data', data)
-    //   })
-    //   .on('end', function () {
-    //     console.log('\n\n')
-    //   });
     const img1 = fs.createReadStream(`${currentDir}/${view}.png`).pipe(new PNG()).on('parsed', doneReading);
     const img2 = fs.createReadStream(`${baselineDir}/${view}.png`).pipe(new PNG()).on('parsed', doneReading);
 

@@ -4,17 +4,12 @@ import { connect } from 'pwa-helpers/connect-mixin.js';
 // This element is connected to the redux store.
 import { store } from '../store.js';
 import { getAllProducts, addToCart } from '../actions/shop.js';
-import { addToCartIcon } from './my-icons.js';
+import { addToCartIcon } from './icons.js';
 import { ButtonSharedStyles } from './button-shared-styles.js';
 
 class ShopProducts extends connect(store)(LitElement) {
   _render({_products}) {
-    return html`
-      ${ButtonSharedStyles}
-      <style>
-        :host { display: block; }
-      </style>
-      ${Object.keys(_products).map((key) => {
+    const items = Object.keys(_products).map((key) => {
         const item = _products[key];
         return html`
           <div>
@@ -28,7 +23,14 @@ class ShopProducts extends connect(store)(LitElement) {
             </button>
           </div>
         `
-      })}
+      });
+
+    return html`
+      ${ButtonSharedStyles}
+      <style>
+        :host { display: block; }
+      </style>
+      ${items}
     `;
   }
 

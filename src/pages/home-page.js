@@ -1,8 +1,8 @@
 import { html } from '@polymer/lit-element';
-import { SharedStyles } from './shared-styles.js';
-import { PageViewElement } from './page-view-element.js';
+import { SharedStyles } from '../components/shared-styles.js';
+import { PageViewElement } from '../components/page-view-element.js';
 
-class TzHome extends PageViewElement {
+class HomePage extends PageViewElement {
   _render(props) {
     return html`
       ${SharedStyles}
