@@ -16,10 +16,29 @@ import { installMediaQueryWatcher } from 'pwa-helpers/media-query.js';
 import { updateMetadata } from 'pwa-helpers/metadata.js';
 
 import { store } from './store.js';
+import { navFactory } from './components/nav.js';
 import { navigate, updateOffline, updateDrawerState, updateLayout } from './data/actions/app.js';
+
+const navItems = [{
+  key: 'home',
+  name: 'Home',
+  url: ''
+}, {
+  key: 'tasks',
+  name: 'Tasks',
+  url: 'tasks'
+}, {
+  key: 'rewards',
+  name: 'Rewards',
+  url: 'rewards'
+}];
+
+const navToolbar = navFactory(navItems, 'toolbar-list');
+const navDrawer = navFactory(navItems, 'drawer-list');
 
 class TazkApp extends connect(store)(LitElement) {
   _render({appTitle, _page, _drawerOpened, _snackbarOpened, _offline}) {
+
     // Anything that's related to rendering should be done in here.
     return html`
     <style>
@@ -168,22 +187,20 @@ class TazkApp extends connect(store)(LitElement) {
       </app-toolbar>
 
       <!-- This gets hidden on a small screen-->
-      <nav class="toolbar-list">
-        <a selected?="${_page === 'home'}" href="/">Home</a>
-      </nav>
+      ${navToolbar(_page)}
     </app-header>
 
     <!-- Drawer content -->
     <app-drawer opened="${_drawerOpened}"
         on-opened-changed="${e => store.dispatch(updateDrawerState(e.target.opened))}">
-      <nav class="drawer-list">
-        <a selected?="${_page === 'home'}" href="/">Home</a>
-      </nav>
+      ${navDrawer(_page)}
     </app-drawer>
 
     <!-- Main content -->
     <main class="main-content">
       <home-page class="page" active?="${_page === 'home'}"></home-page>
+      <rewards-page class="page" active?="${_page === 'rewards'}"></rewards-page>
+      <tasks-page class="page" active?="${_page === 'tasks'}"></tasks-page>
       <not-found-page class="page" active?="${_page === '404'}"></not-found-page>
     </main>
 
