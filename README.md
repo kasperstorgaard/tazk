@@ -43,3 +43,4 @@ Get through the jungle of stuff you need to do.
     - default
     - custom
 - user
+- serviceworker

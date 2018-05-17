@@ -7,11 +7,10 @@ import { PageViewElement } from '../components/page-view-element.js';
 import { store } from '../store.js';
 
 // We are lazy loading its reducer.
-import tasks from '../data/reducers/tasks.js';
-import {getAllTasks}  from '../data/actions/tasks.js';
+import {reducer, getAllTasks}  from '../stores/tasks/tasks.js';
 
 store.addReducers({
-  tasks
+  tasks: reducer
 });
 
 class TasksPage extends connect(store)(PageViewElement) {

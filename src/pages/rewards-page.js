@@ -6,12 +6,10 @@ import { PageViewElement } from '../components/page-view-element.js';
 
 import { store } from '../store.js';
 
-// We are lazy loading its reducer.
-import rewards from '../data/reducers/rewards.js';
-import {getAllRewards, addReward}  from '../data/actions/rewards.js';
+import {reducer, getAllRewards, addReward}  from '../stores/rewards/rewards.js';
 
 store.addReducers({
-  rewards
+  rewards: reducer
 });
 
 class RewardsPage extends connect(store)(PageViewElement) {

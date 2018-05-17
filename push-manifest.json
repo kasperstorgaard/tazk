@@ -1,10 +1,6 @@
 {
   "/": {
-    "src/components/my-app.js": {
-      "type": "script",
-      "weight": 1
-    },
-    "src/components/home.js": {
+    "src/shared/components/home-page.js": {
       "type": "script",
       "weight": 1
     },
@@ -18,7 +14,7 @@
       "type": "script",
       "weight": 1
     },
-    "src/components/home.js": {
+    "src/shared/components/home.js": {
       "type": "script",
       "weight": 1
     },

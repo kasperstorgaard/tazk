@@ -17,7 +17,7 @@ import { updateMetadata } from 'pwa-helpers/metadata.js';
 
 import { store } from './store.js';
 import { navFactory } from './components/nav.js';
-import { navigate, updateOffline, updateDrawerState, updateLayout } from './data/actions/app.js';
+import { navigate, updateOffline, updateDrawerState, updateLayout } from './stores/app/app.js';
 
 const navItems = [{
   key: 'home',
