@@ -1,7 +1,8 @@
 # TARZK #
 Get through the jungle of stuff you need to do.
 
-## PAGES: ##
+## structure overview ##
+### PAGES: ###
 - home / explainer
 - signup
 - signin
@@ -34,7 +35,7 @@ Get through the jungle of stuff you need to do.
     - single task
     - all current and future
 
-## DATA ##
+### DATA ###
 - task
     - default
     - custom
