@@ -25,13 +25,17 @@
     "@polymer/lit-element": "^0.5.0",
     "@webcomponents/webcomponentsjs": "^2.0.0",
     "idb": "^2.1.1",
+    "jest": "^22.4.4",
     "pwa-helpers": "^0.8.2",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
-    "reselect": "^3.0.1"
+    "reselect": "^3.0.1",
+    "testdouble": "^3.8.1"
   },
   "devDependencies": {
     "axe-core": "^3.0.0",
+    "babel-jest": "^22.4.4",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "chai": "^4.1.2",
     "mocha": "^5.1.0",
     "pixelmatch": "^4.0.2",
