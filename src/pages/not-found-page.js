@@ -1,6 +1,6 @@
 import { html } from '@polymer/lit-element';
-import { PageViewElement } from './page-view-element.js';
-import { SharedStyles } from './shared-styles.js';
+import { PageViewElement } from '../components/page-view-element.js';
+import { SharedStyles } from '../components/shared-styles.js';
 
 class NotFoundPage extends PageViewElement {
   _render(props) {

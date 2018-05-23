@@ -1,4 +1,4 @@
-import 'idb/lib/idb';
+import 'idb/lib/idb.js';
 
 let dbPromise;
 

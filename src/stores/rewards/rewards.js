@@ -1,4 +1,4 @@
-import {getAll, updateItem, addItem, getItem, deleteItem} from '../../services/indexeddb/indexeddb-service.js';
+import {getAll, updateItem, addItem, getItem, deleteItem} from '../../api.js';
 
 export const ADD = 'tazk/rewards/ADD';
 export const DELETE = 'tazk/rewards/DELETE';
