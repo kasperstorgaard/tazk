@@ -46,12 +46,11 @@ class TazkApp extends connect(store)(LitElement) {
         --app-drawer-width: 256px;
         display: block;
 
-        --app-primary-color: #E91E63;
+        --app-primary-color: #29AB87;
         --app-secondary-color: #293237;
-        --app-dark-text-color: var(--app-secondary-color);
-        --app-light-text-color: white;
-        --app-section-even-color: #f7f7f7;
-        --app-section-odd-color: white;
+
+        --app-primary-text-color: white;
+        --app-secondary-text-color: var(--app-secondary-color);
 
         --app-header-background-color: white;
         --app-header-text-color: var(--app-dark-text-color);
@@ -60,6 +59,10 @@ class TazkApp extends connect(store)(LitElement) {
         --app-drawer-background-color: var(--app-secondary-color);
         --app-drawer-text-color: var(--app-light-text-color);
         --app-drawer-selected-color: #78909C;
+      }
+      
+      :root {
+        background: var(--app-primary-color);
       }
 
       app-header {
@@ -174,6 +177,10 @@ class TazkApp extends connect(store)(LitElement) {
         [main-title] {
           padding-right: 0px;
         }
+
+        footer p {
+          color: var(--app-primary-text-color);
+        }
       }
     </style>
 
@@ -205,7 +212,7 @@ class TazkApp extends connect(store)(LitElement) {
     </main>
 
     <footer>
-      <p>Made with &lt;3 by the Polymer team.</p>
+      <p>Made with &lt;3 in Polymer.js.</p>
     </footer>
 
     <snack-bar active?="${_snackbarOpened}">

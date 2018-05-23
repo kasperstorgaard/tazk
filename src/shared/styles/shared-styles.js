@@ -9,7 +9,6 @@ export const SharedStyles = html`
 
   section {
     padding: 24px;
-    background: var(--app-section-odd-color);
   }
 
   section > * {
@@ -18,14 +17,10 @@ export const SharedStyles = html`
     margin-left: auto;
   }
 
-  section:nth-of-type(even) {
-    background: var(--app-section-even-color);
-  }
-
   h2 {
     font-size: 24px;
     text-align: center;
-    color: var(--app-dark-text-color);
+    color: var(--app-primary-text-color);
   }
 
   @media (min-width: 460px) {
