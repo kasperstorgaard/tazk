@@ -1,13 +1,13 @@
 import { html } from '@polymer/lit-element';
 import { connect } from 'pwa-helpers/connect-mixin.js';
 
-import { SharedStyles } from '../components/shared-styles.js';
-import { PageViewElement } from '../components/page-view-element.js';
+import { SharedStyles } from '../../shared/styles/shared-styles.js';
+import { PageViewElement } from '../../shared/components/page-view-element.js';
 
-import { store } from '../store.js';
+import { store } from '../../store.js';
 
 // We are lazy loading its reducer.
-import {reducer, getAllTasks}  from '../stores/tasks/tasks.js';
+import {reducer, getAllTasks}  from './tasks-store.js';
 
 store.addReducers({
   tasks: reducer

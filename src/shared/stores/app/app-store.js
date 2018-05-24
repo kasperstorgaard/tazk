@@ -19,19 +19,19 @@ export const navigate = (path) => (dispatch) => {
 const loadPage = (page) => async (dispatch) => {
   switch(page) {
     case 'home':
-      await import('../../pages/home-page.js');
+      await import('../../../pages/home/home-page.js');
       // Put code here that you want it to run every time when
       // navigate to view1 page and home.js is loaded
       break;
     case 'rewards':
-      await import('../../pages/rewards-page.js');
+      await import('../../../pages/rewards/rewards-page.js');
       break;
     case 'tasks':
-      await import('../../pages/tasks-page.js');
+      await import('../../../pages/tasks/tasks-page.js');
       break;
     default:
       page = '404';
-      await import('../../pages/not-found-page.js');
+      await import('../../../pages/not-found/not-found-page.js');
   }
 
   dispatch(updatePage(page));

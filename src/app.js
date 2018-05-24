@@ -6,9 +6,6 @@ import '@polymer/app-layout/app-scroll-effects/effects/waterfall.js';
 import '@polymer/app-layout/app-toolbar/app-toolbar.js';
 import { setPassiveTouchGestures } from '@polymer/polymer/lib/utils/settings.js';
 
-import { menuIcon } from './components/icons.js';
-import './components/snack-bar.js';
-
 import { connect } from 'pwa-helpers/connect-mixin.js';
 import { installRouter } from 'pwa-helpers/router.js';
 import { installOfflineWatcher } from 'pwa-helpers/network.js';
@@ -16,8 +13,11 @@ import { installMediaQueryWatcher } from 'pwa-helpers/media-query.js';
 import { updateMetadata } from 'pwa-helpers/metadata.js';
 
 import { store } from './store.js';
-import { navFactory } from './components/nav.js';
-import { navigate, updateOffline, updateDrawerState, updateLayout } from './stores/app/app.js';
+import { navigate, updateOffline, updateDrawerState, updateLayout } from './shared/stores/app/app-store.js';
+
+import { menuIcon } from './shared/components/icons.js';
+import './shared/components/snack-bar.js';
+import { navFactory } from './shared/components/nav.js';
 
 const navItems = [{
   key: 'home',
