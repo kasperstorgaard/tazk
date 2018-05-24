@@ -12,12 +12,14 @@ import { installOfflineWatcher } from 'pwa-helpers/network.js';
 import { installMediaQueryWatcher } from 'pwa-helpers/media-query.js';
 import { updateMetadata } from 'pwa-helpers/metadata.js';
 
-import { store } from './store.js';
 import { navigate, updateOffline, updateDrawerState, updateLayout } from './shared/stores/app/app-store.js';
 
 import { menuIcon } from './shared/components/icons.js';
 import './shared/components/snack-bar.js';
 import { navFactory } from './shared/components/nav.js';
+
+import { store } from './store.js';
+import { appProperties } from './app-styles.js';
 
 const navItems = [{
   key: 'home',
@@ -41,27 +43,10 @@ class TazkApp extends connect(store)(LitElement) {
 
     // Anything that's related to rendering should be done in here.
     return html`
+    ${appProperties}
     <style>
       :host {
-        --app-drawer-width: 256px;
         display: block;
-
-        --app-primary-color: #29AB87;
-        --app-secondary-color: #293237;
-
-        --app-primary-text-color: white;
-        --app-secondary-text-color: var(--app-secondary-color);
-
-        --app-header-background-color: white;
-        --app-header-text-color: var(--app-dark-text-color);
-        --app-header-selected-color: var(--app-primary-color);
-
-        --app-drawer-background-color: var(--app-secondary-color);
-        --app-drawer-text-color: var(--app-light-text-color);
-        --app-drawer-selected-color: #78909C;
-      }
-      
-      :root {
         background: var(--app-primary-color);
       }
 
