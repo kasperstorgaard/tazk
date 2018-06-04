@@ -44,3 +44,6 @@ Get through the jungle of stuff you need to do.
     - custom
 - user
 - serviceworker
+
+### IDEAS ###
+- difficulty rating is bananas, use in icons, collect as reward (maybe even spend on rewards?)

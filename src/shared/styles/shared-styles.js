@@ -8,7 +8,7 @@ export const SharedStyles = html`
   }
 
   section {
-    padding: 24px;
+    padding: var(--app-space-vertical-medium) var(--app-space-horizontal-medium);
   }
 
   section > * {
@@ -18,28 +18,17 @@ export const SharedStyles = html`
   }
 
   h2 {
-    font-size: 24px;
-    text-align: center;
+    font-size: var(--app-font-size-large);
     color: var(--app-primary-text-color);
   }
 
-  @media (min-width: 460px) {
-    h2 {
-      font-size: 36px;
-    }
+  h2, h3 {
+    font-weight: 400;
   }
 
-  .circle {
-    display: block;
-    width: 64px;
-    height: 64px;
-    margin: 0 auto;
+  .page-title {
     text-align: center;
-    border-radius: 50%;
-    background: var(--app-primary-color);
-    color: var(--app-light-text-color);
-    font-size: 30px;
-    line-height: 64px;
   }
+
 </style>
 `;

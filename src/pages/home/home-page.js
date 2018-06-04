@@ -11,7 +11,7 @@ class HomePage extends connect(store)(PageViewElement) {
     return html`
       ${SharedStyles}
       <section>
-        <h2>Home</h2>
+        <h2 class="page-title">Home</h2>
       </section>
     `;
   }

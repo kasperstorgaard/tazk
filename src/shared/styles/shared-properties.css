@@ -1,0 +1,46 @@
+html {
+  /* base units */
+  --app-size-unit: 4px;
+  --app-font-size-base: 16px;
+
+  /* colors */
+  --app-primary-color: rgba(41, 171, 135, 1);
+  --app-primary-color-dark: rgba(54, 53, 55, 1);
+  --app-primary-color-accent: rgba(220, 237, 49, 1);
+  --app-secondary-color: white;
+
+  --app-primary-color-negative: rgba(239, 45, 86, 1);
+  --app-primary-color-info: rgba(237, 125, 58, 1);
+
+  /* text */
+  --app-primary-text-color: var(--app-primary-color-dark);
+  --app-secondary-text-color: var(--app-secondary-color);
+
+  --app-font-size-medium: 1rem;
+  --app-font-size-large: 1.5rem;
+  --app-font-size-xlarge: 2.75rem;
+  
+  /* sizes */
+
+  /* -- distance */
+  --app-distance-small: calc(var(--app-size-unit) * 2);
+  --app-distance-medium: calc(var(--app-size-unit) * 6);
+  --app-distance-large: calc(var(--app-size-unit) * 12);
+  --app-distance-xlarge: calc(var(--app-size-unit) * 30);
+
+  /* -- space */
+  --app-space-vertical-small: calc(var(--app-size-unit) * 2);
+  --app-space-vertical-medium: calc(var(--app-size-unit) * 3);
+  --app-space-vertical-large: calc(var(--app-size-unit) * 6);
+  --app-space-vertical-xlarge: calc(var(--app-size-unit) * 12);
+
+  --app-space-horizontal-small: calc(var(--app-size-unit) * 2);
+  --app-space-horizontal-medium: calc(var(--app-size-unit) * 4);
+  --app-space-horizontal-large: calc(var(--app-size-unit) * 8);
+  --app-space-horizontal-xlarge: calc(var(--app-size-unit) * 15);
+
+  --app-z-index-bar: 2;
+  --app-z-index-global-cta: 3;
+  --app-z-index-overlay: 4;
+  --app-z-index-menu: 5;
+}
