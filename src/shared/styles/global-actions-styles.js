@@ -7,7 +7,7 @@ export const GlobalActions = html`
             display: flex;
             width: 100vw;
             justify-content: center;
-            bottom: var(--app-distance-medium);
+            bottom: var(--app-global-actions-bottom);
             z-index: var(--app-z-index-global-cta);
         }
 

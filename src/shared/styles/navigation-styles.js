@@ -103,7 +103,7 @@ export const NavigationStyles = html`
     .bottom-bar {
       position: fixed;
       bottom: 0;
-      height: calc(var(--app-size-unit) * 8 + var(--app-distance-medium));
+      height: var(--app-bottom-bar-height);
       width: 100%;
       background: var(--app-secondary-color);
     }

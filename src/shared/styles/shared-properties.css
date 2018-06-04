@@ -43,4 +43,7 @@ html {
   --app-z-index-global-cta: 3;
   --app-z-index-overlay: 4;
   --app-z-index-menu: 5;
+
+  --app-global-actions-bottom: var(--app-distance-medium);
+  --app-bottom-bar-height: calc(var(--app-size-unit) * 8 + var(--app-distance-medium));
 }
